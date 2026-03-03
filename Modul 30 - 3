@@ -1,0 +1,1568 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/fannyfagame-spec/NoteBook-Jupiter/blob/main/Modul%2030%20-%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "5d53d013",
+      "metadata": {
+        "id": "5d53d013"
+      },
+      "source": [
+        "<font size=\"+3\">Module 30 - Python Data Structures</font>\n",
+        "\n",
+        "In this notebook, we are going to learn about the data structures in python."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "b9b7536d",
+      "metadata": {
+        "id": "b9b7536d"
+      },
+      "source": [
+        "## Collection Datatypes"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "6345cdb8",
+      "metadata": {
+        "id": "6345cdb8"
+      },
+      "source": [
+        "![download.png](attachment:download.png)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "035825d1",
+      "metadata": {
+        "id": "035825d1"
+      },
+      "source": [
+        "### List"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 130,
+      "id": "dfa7b20d",
+      "metadata": {
+        "id": "dfa7b20d"
+      },
+      "outputs": [],
+      "source": [
+        "#Create a heterogeneous list called 'list1'\n",
+        "list1 = ['Apple',25,-89,True,3.56]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 131,
+      "id": "193b6933",
+      "metadata": {
+        "id": "193b6933",
+        "outputId": "bc2b6133-b05a-4998-ed09-fc7d710e1aeb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 25, -89, True, 3.56]\n"
+          ]
+        }
+      ],
+      "source": [
+        "#print the list\n",
+        "print(list1)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 132,
+      "id": "c83a9c6b",
+      "metadata": {
+        "id": "c83a9c6b",
+        "outputId": "94443018-3ac5-4b88-f734-0544aff8b939",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-89"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 132
+        }
+      ],
+      "source": [
+        "#Pull out the 3rd value in the list\n",
+        "list1[2]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 133,
+      "id": "950d960f",
+      "metadata": {
+        "id": "950d960f"
+      },
+      "outputs": [],
+      "source": [
+        "#create another list called fruits and add 4 items in the list\n",
+        "fruits = ['mango', 'apple', 'orange', 'banana']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 134,
+      "id": "8213dd2c",
+      "metadata": {
+        "id": "8213dd2c"
+      },
+      "outputs": [],
+      "source": [
+        "#add a new item cherry in the list\n",
+        "#append method is used to add items to the end of the list\n",
+        "fruits.append('cherry')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 135,
+      "id": "c9b54e00",
+      "metadata": {
+        "id": "c9b54e00",
+        "outputId": "8594c8ef-1a6f-42ec-b758-24501828aef0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['mango', 'apple', 'orange', 'banana', 'cherry']\n"
+          ]
+        }
+      ],
+      "source": [
+        "#to view list items\n",
+        "print(fruits)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 136,
+      "id": "aac96529",
+      "metadata": {
+        "id": "aac96529",
+        "outputId": "0c04fe69-0ac7-4be7-fa0b-b437c398addf",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['mango', 'apple', 'orange', 'pineapple', 'cherry']\n"
+          ]
+        }
+      ],
+      "source": [
+        "#change the 4th item to pineapple\n",
+        "fruits[3]='pineapple'\n",
+        "print(fruits)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 137,
+      "id": "8c224bc3",
+      "metadata": {
+        "id": "8c224bc3"
+      },
+      "outputs": [],
+      "source": [
+        "#insert another new item orange at the 4th index\n",
+        "fruits.insert(4,'orange')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 138,
+      "id": "1ff5c9d6",
+      "metadata": {
+        "id": "1ff5c9d6",
+        "outputId": "bae55ab0-82ae-4152-9d44-95f5f7bd4419",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['mango', 'apple', 'orange', 'pineapple', 'orange', 'cherry']\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(fruits)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "3a42a017",
+      "metadata": {
+        "id": "3a42a017"
+      },
+      "source": [
+        "kindly note orange is occurring two times in the above list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 139,
+      "id": "986e72de",
+      "metadata": {
+        "id": "986e72de",
+        "outputId": "0db3f440-5abc-4df4-cd5d-5e91ddbab74e",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'apple'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 139
+        }
+      ],
+      "source": [
+        "#remove item 'apple' from the list\n",
+        "fruits.pop(1)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 140,
+      "id": "491c007e",
+      "metadata": {
+        "id": "491c007e",
+        "outputId": "b24b50e3-eefb-4d62-bf7f-89c975601a83",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['mango', 'orange', 'pineapple', 'orange', 'cherry']\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(fruits)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "35462fa5",
+      "metadata": {
+        "id": "35462fa5"
+      },
+      "source": [
+        "apple has been removed from the list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 141,
+      "id": "0d8bc937",
+      "metadata": {
+        "id": "0d8bc937"
+      },
+      "outputs": [],
+      "source": [
+        "#sort the items in ascending order\n",
+        "fruits.sort()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 142,
+      "id": "0064c6f6",
+      "metadata": {
+        "id": "0064c6f6",
+        "outputId": "53c3f484-fe42-4737-a2e8-03d502c70c70",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['cherry', 'mango', 'orange', 'orange', 'pineapple']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 142
+        }
+      ],
+      "source": [
+        "fruits"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 143,
+      "id": "f8a4e37c",
+      "metadata": {
+        "id": "f8a4e37c"
+      },
+      "outputs": [],
+      "source": [
+        "#sort the items in descending order\n",
+        "fruits.sort(reverse=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 144,
+      "id": "41002a22",
+      "metadata": {
+        "id": "41002a22",
+        "outputId": "10f4904d-489c-420f-e67f-6eb98b7eec69",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['pineapple', 'orange', 'orange', 'mango', 'cherry']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 144
+        }
+      ],
+      "source": [
+        "fruits"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "40837e87",
+      "metadata": {
+        "id": "40837e87"
+      },
+      "source": [
+        "### Tuple"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 145,
+      "id": "0747cca9",
+      "metadata": {
+        "id": "0747cca9"
+      },
+      "outputs": [],
+      "source": [
+        "#create a tuple called 'friends' and add 4 items to it\n",
+        "friends = ('monica','chandler','pheobe','rachel','joey')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 146,
+      "id": "81fd0645",
+      "metadata": {
+        "id": "81fd0645",
+        "outputId": "c9b6cdfe-983a-40c3-cdd5-47da464afe1e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('monica', 'chandler', 'pheobe', 'rachel', 'joey')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 146
+        }
+      ],
+      "source": [
+        "friends"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 147,
+      "id": "31a8d260",
+      "metadata": {
+        "id": "31a8d260",
+        "outputId": "60a6125e-59db-4605-88ec-f7ceac2a0a20",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'rachel'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 147
+        }
+      ],
+      "source": [
+        "#access the last item\n",
+        "friends[3]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 148,
+      "id": "52b25409",
+      "metadata": {
+        "id": "52b25409",
+        "outputId": "c4a1df63-af68-404a-9e87-f007e6ee6904",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'joey'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 148
+        }
+      ],
+      "source": [
+        "#access the last item using negative indexing\n",
+        "friends[-1]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 149,
+      "id": "46b97072",
+      "metadata": {
+        "id": "46b97072",
+        "outputId": "b8dac637-f684-4eae-c33d-6e219b922e67",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('pheobe', 'rachel')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 149
+        }
+      ],
+      "source": [
+        "#access group of items using negative indexing\n",
+        "friends[-3:-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ed3a578f",
+      "metadata": {
+        "id": "ed3a578f"
+      },
+      "source": [
+        "returns the items from index -3 (included) to index -1 (excluded)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 150,
+      "id": "e7000a22",
+      "metadata": {
+        "id": "e7000a22"
+      },
+      "outputs": [],
+      "source": [
+        "#convert tuple into list\n",
+        "y = list(friends)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 151,
+      "id": "3b973991",
+      "metadata": {
+        "id": "3b973991",
+        "outputId": "2b2771de-f6d7-4b59-9c2e-67ba5724c9b0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['monica', 'chandler', 'pheobe', 'rachel', 'joey']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 151
+        }
+      ],
+      "source": [
+        "y"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 152,
+      "id": "10593f43",
+      "metadata": {
+        "id": "10593f43"
+      },
+      "outputs": [],
+      "source": [
+        "y.append('ross')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 153,
+      "id": "f85ee6f5",
+      "metadata": {
+        "id": "f85ee6f5",
+        "outputId": "c9351af7-8950-4f66-c24e-1fa2987bfcd0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['monica', 'chandler', 'pheobe', 'rachel', 'joey', 'ross']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 153
+        }
+      ],
+      "source": [
+        "y"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 154,
+      "id": "78ec4228",
+      "metadata": {
+        "id": "78ec4228"
+      },
+      "outputs": [],
+      "source": [
+        "#add tuple to tuple\n",
+        "y = ('monica',)\n",
+        "friends = friends + y"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 155,
+      "id": "a763ed22",
+      "metadata": {
+        "id": "a763ed22",
+        "outputId": "b376d0ff-c87d-4d42-c750-2bf7de27af6a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('monica', 'chandler', 'pheobe', 'rachel', 'joey', 'monica')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 155
+        }
+      ],
+      "source": [
+        "friends"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 156,
+      "id": "dcdf23f9",
+      "metadata": {
+        "id": "dcdf23f9"
+      },
+      "outputs": [],
+      "source": [
+        "#remove item from the tuple- convert tuple into list\n",
+        "x = list(friends)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 157,
+      "id": "4275b68a",
+      "metadata": {
+        "id": "4275b68a"
+      },
+      "outputs": [],
+      "source": [
+        "x.remove('joey')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 158,
+      "id": "8a7a24d1",
+      "metadata": {
+        "id": "8a7a24d1",
+        "outputId": "6a87327c-fec6-4a38-b18a-3b48b8685f59",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['monica', 'chandler', 'pheobe', 'rachel', 'monica']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 158
+        }
+      ],
+      "source": [
+        "x"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 159,
+      "id": "a088c0ec",
+      "metadata": {
+        "id": "a088c0ec"
+      },
+      "outputs": [],
+      "source": [
+        "#delete the entire tuple\n",
+        "del friends"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 160,
+      "id": "2cf78695",
+      "metadata": {
+        "id": "2cf78695"
+      },
+      "outputs": [],
+      "source": [
+        "friends = input"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "2f7a65c3",
+      "metadata": {
+        "id": "2f7a65c3"
+      },
+      "source": [
+        "this will raise an error because the tuple no longer exists"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "f8060b0d",
+      "metadata": {
+        "id": "f8060b0d"
+      },
+      "source": [
+        "### Set"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 189,
+      "id": "56ef46cd",
+      "metadata": {
+        "id": "56ef46cd"
+      },
+      "outputs": [],
+      "source": [
+        "#create a set called flowers having 3 items\n",
+        "flowers = {'lily','rose','lotus','jasmine'}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 162,
+      "id": "3766ccdd",
+      "metadata": {
+        "id": "3766ccdd",
+        "outputId": "4a0a5e61-22e5-47d8-ad30-eb75735841d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'lily', 'lotus', 'rose'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 162
+        }
+      ],
+      "source": [
+        "flowers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 163,
+      "id": "16e06f06",
+      "metadata": {
+        "id": "16e06f06"
+      },
+      "outputs": [],
+      "source": [
+        "#add item 'jasmine' in the set 'flowers'\n",
+        "flowers.add('jasmine')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 164,
+      "id": "47a036ed",
+      "metadata": {
+        "id": "47a036ed",
+        "outputId": "f671ab5c-572d-4ed8-f5b9-f615a41b652f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 164
+        }
+      ],
+      "source": [
+        "#determine the number of items in the set 'flowers'\n",
+        "len(flowers)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 165,
+      "id": "5b070e1b",
+      "metadata": {
+        "id": "5b070e1b"
+      },
+      "outputs": [],
+      "source": [
+        "#add items from another set to 'flowers'\n",
+        "other = {'tulip'}\n",
+        "flowers.update(other)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 188,
+      "id": "0e0f175f",
+      "metadata": {
+        "id": "0e0f175f",
+        "outputId": "472f50f7-4135-4a1d-b935-5fb64a3b3cc9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "set()"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 188
+        }
+      ],
+      "source": [
+        "flowers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 167,
+      "id": "3343ee31",
+      "metadata": {
+        "id": "3343ee31"
+      },
+      "outputs": [],
+      "source": [
+        "#remove 'jasmine' from the set 'flowers'\n",
+        "flowers.remove('jasmine')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 187,
+      "id": "860b9a17",
+      "metadata": {
+        "id": "860b9a17",
+        "outputId": "246a98ee-d25f-4306-acc7-feacae4cd07b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "set()"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 187
+        }
+      ],
+      "source": [
+        "flowers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "57a4fd78",
+      "metadata": {
+        "id": "57a4fd78"
+      },
+      "source": [
+        "jasmine has been removed from the set"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 190,
+      "id": "4dc51982",
+      "metadata": {
+        "id": "4dc51982"
+      },
+      "outputs": [],
+      "source": [
+        "#If we again try to remove 'jasmine' using remove()\n",
+        "flowers.remove('jasmine')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 170,
+      "id": "e6b31456",
+      "metadata": {
+        "id": "e6b31456"
+      },
+      "outputs": [],
+      "source": [
+        "#let's try to remove 'jasmine' using discard()\n",
+        "flowers.discard('jasmine')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "a39cd044",
+      "metadata": {
+        "id": "a39cd044"
+      },
+      "source": [
+        "If the item to be removed does not exist, remove() will raise an error while discard won't."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 191,
+      "id": "15cd2891",
+      "metadata": {
+        "id": "15cd2891"
+      },
+      "outputs": [],
+      "source": [
+        "# pop() used to remove the last item of the set\n",
+        "x = flowers.pop()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "1537d653",
+      "metadata": {
+        "id": "1537d653"
+      },
+      "source": [
+        "Sets are unordered, so when using the pop() method, you do not know which item that gets removed."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 172,
+      "id": "baf0a99c",
+      "metadata": {
+        "id": "baf0a99c",
+        "outputId": "634c9dc9-77fd-4213-9815-44cd05704ef1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "rose\n",
+            "{'lotus', 'lily', 'tulip'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(x)\n",
+        "print(flowers)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 173,
+      "id": "99df4c17",
+      "metadata": {
+        "id": "99df4c17"
+      },
+      "outputs": [],
+      "source": [
+        "#empty the set 'flowers'\n",
+        "flowers.clear()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 174,
+      "id": "1289d2cc",
+      "metadata": {
+        "id": "1289d2cc",
+        "outputId": "37f580f7-affb-4d15-91e5-3f70cfe0072a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "set()"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 174
+        }
+      ],
+      "source": [
+        "flowers"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "11483092",
+      "metadata": {
+        "id": "11483092"
+      },
+      "source": [
+        "### Dictionary"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 175,
+      "id": "b2ac18e5",
+      "metadata": {
+        "id": "b2ac18e5"
+      },
+      "outputs": [],
+      "source": [
+        "#create a dictionary of calendar(first five months)\n",
+        "calendar = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May'}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 176,
+      "id": "a158a5ab",
+      "metadata": {
+        "id": "a158a5ab",
+        "outputId": "8d86167b-9156-41f4-c00b-cfb68f53fe03",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 176
+        }
+      ],
+      "source": [
+        "calendar"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 177,
+      "id": "7766e2dd",
+      "metadata": {
+        "id": "7766e2dd"
+      },
+      "outputs": [],
+      "source": [
+        "#accessing dictionary item by its key name\n",
+        "z = calendar[3]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 178,
+      "id": "17ca8600",
+      "metadata": {
+        "id": "17ca8600",
+        "outputId": "9e0af742-f256-45ac-dba6-4a35784ea9c5",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Mar'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 178
+        }
+      ],
+      "source": [
+        "z"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "0ead5d6b",
+      "metadata": {
+        "id": "0ead5d6b"
+      },
+      "source": [
+        "#view all the keys in the dictionary\n",
+        "calendar.keys()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 179,
+      "id": "9079e9ee",
+      "metadata": {
+        "id": "9079e9ee"
+      },
+      "outputs": [],
+      "source": [
+        "#change a particular item by referring to its key\n",
+        "calendar[4]='April'"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 180,
+      "id": "6db6fd2d",
+      "metadata": {
+        "id": "6db6fd2d",
+        "outputId": "779006cf-ac17-4575-9647-7eb33b161449",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'April', 5: 'May'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 180
+        }
+      ],
+      "source": [
+        "calendar"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 181,
+      "id": "36159c7c",
+      "metadata": {
+        "id": "36159c7c"
+      },
+      "outputs": [],
+      "source": [
+        "#update the calendar with one more entry\n",
+        "calendar.update({6:'June'})"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 182,
+      "id": "e91357fb",
+      "metadata": {
+        "id": "e91357fb",
+        "outputId": "3d05f2ee-78bb-414a-8112-fa4b09a8eb2b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'April', 5: 'May', 6: 'June'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 182
+        }
+      ],
+      "source": [
+        "calendar"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 183,
+      "id": "bd0d7238",
+      "metadata": {
+        "id": "bd0d7238"
+      },
+      "outputs": [],
+      "source": [
+        "#create copy of the dictionary\n",
+        "new = calendar.copy()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 184,
+      "id": "880cdfd9",
+      "metadata": {
+        "id": "880cdfd9",
+        "outputId": "e1e25352-0f29-4060-8d54-073a11d6394c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'April', 5: 'May', 6: 'June'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 184
+        }
+      ],
+      "source": [
+        "new"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "134ceab7",
+      "metadata": {
+        "id": "134ceab7"
+      },
+      "source": [
+        "### Movie Booking Program\n",
+        "\n",
+        "In this program, we will use\n",
+        "* datastructures like dictionary, list\n",
+        "* if statements and while loop\n",
+        "* type casting (string to int)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "9dbeaa14",
+      "metadata": {
+        "id": "9dbeaa14"
+      },
+      "source": [
+        "![download%20%282%29.png](attachment:download%20%282%29.png)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 198,
+      "id": "755cbebb",
+      "metadata": {
+        "id": "755cbebb",
+        "outputId": "fd5e6654-cbd2-45f7-d519-d1f9ea5ca8c2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Masukkan nama film (atau ketik 'exit' untuk keluar): Batman\n",
+            "Masukkan umur kamu: 18\n",
+            "Tiket berhasil dipesan.\n",
+            "Sisa tiket: 4\n",
+            "Masukkan nama film (atau ketik 'exit' untuk keluar): exit\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "# create a dictionary of movies with key: value pair as \"Movie Name\": [age criteria, no of tickets available]\n",
+        "\n",
+        "movies = {\n",
+        "    \"Finding Nemo\": [5, 2],\n",
+        "    \"Moana\": [6, 3],\n",
+        "    \"Batman\": [18, 5],\n",
+        "    \"The Lion King\": [10, 4]\n",
+        "}\n",
+        "\n",
+        "# create a while loop to run continuously\n",
+        "while True:\n",
+        "\n",
+        "    # Take input from the user which movie they would like to watch\n",
+        "    # strip off the blankspaces and convert to title case\n",
+        "    choice = input(\"Masukkan nama film (atau ketik 'exit' untuk keluar): \").strip().title()\n",
+        "\n",
+        "    if choice == \"Exit\":\n",
+        "        break\n",
+        "\n",
+        "    # Create a conditional logic using if:\n",
+        "    # if specified movie is present in the dictionary then continue\n",
+        "    if choice in movies:\n",
+        "\n",
+        "        # ask the user for age\n",
+        "        age = int(input(\"Masukkan umur kamu: \"))\n",
+        "\n",
+        "        # check the user for age eligibility\n",
+        "        if age >= movies[choice][0]:\n",
+        "\n",
+        "            # if eligible check for availability of seats\n",
+        "            if movies[choice][1] > 0:\n",
+        "\n",
+        "                # if available, no of seats will reduce by 1\n",
+        "                movies[choice][1] -= 1\n",
+        "                print(\"Tiket berhasil dipesan.\")\n",
+        "                print(\"Sisa tiket:\", movies[choice][1])\n",
+        "\n",
+        "            else:\n",
+        "                print(\"Maaf, tiket sudah habis.\")\n",
+        "\n",
+        "        else:\n",
+        "            print(\"Umur kamu belum memenuhi syarat untuk film ini.\")\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Film tidak ditemukan.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "5dd84b99",
+      "metadata": {
+        "id": "5dd84b99"
+      },
+      "source": [
+        "## Random Module"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 192,
+      "id": "f1cb14ba",
+      "metadata": {
+        "id": "f1cb14ba"
+      },
+      "outputs": [],
+      "source": [
+        "# for using random module\n",
+        "import random"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 193,
+      "id": "0761169d",
+      "metadata": {
+        "id": "0761169d",
+        "outputId": "a34a8a7a-ecd8-4381-badb-06e766b16338",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "11"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 193
+        }
+      ],
+      "source": [
+        "# randrange() - This method returns a randomly selected number from the specified range\n",
+        "# Syntax: random.randrange(start, stop, step)\n",
+        "\n",
+        "#returns a number between 10 (included) and 26 (not included), step -1\n",
+        "random.randrange(10,26,1)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 194,
+      "id": "70c0a65e",
+      "metadata": {
+        "id": "70c0a65e",
+        "outputId": "5a60afac-54a2-42be-9064-87989802a6b1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "67"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 194
+        }
+      ],
+      "source": [
+        "#randint() - This method returns an integer number from a specified range\n",
+        "#Syntax:  random.randint(start, stop)\n",
+        "\n",
+        "#returns a number between 50 and 100 (both included)\n",
+        "random.randint(50,100)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 203,
+      "id": "db436fe3",
+      "metadata": {
+        "id": "db436fe3",
+        "outputId": "c11df688-4b97-43a2-ddf9-ea8a3e7650f1",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Program'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 203
+        }
+      ],
+      "source": [
+        "# choice() - This method returns a random element from the specified sequence\n",
+        "#Syntax:  random.choice(sequence)\n",
+        "\n",
+        "x = ['Python','Program','Language']\n",
+        "random.choice(x)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 200,
+      "id": "51b011f8",
+      "metadata": {
+        "id": "51b011f8",
+        "outputId": "8a1eeb9b-71a4-481b-ab27-c65f47c3af6a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Python', 'Program', 'Language']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 200
+        }
+      ],
+      "source": [
+        "x"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8.5"
+    },
+    "toc": {
+      "base_numbering": 1,
+      "nav_menu": {},
+      "number_sections": true,
+      "sideBar": true,
+      "skip_h1_title": false,
+      "title_cell": "Table of Contents",
+      "title_sidebar": "Contents",
+      "toc_cell": false,
+      "toc_position": {},
+      "toc_section_display": true,
+      "toc_window_display": true
+    },
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
